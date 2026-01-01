@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+    },
+  "scripts": {
+    "start": "index.html",
+    "dev": "index.html",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css --minify",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  }
+}

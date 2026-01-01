@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme{
+    /* buat warna primary, secondary, dark */
+    --color-primary: oklch(51.8% 0.253 323.949);
+    --color-secondary: oklch(71.8% 0.202 349.761);
+    --color-dark: oklch(44.6% 0.043 257.281);
+}
+@layer utilities{
+    /* buat font */
+body{
+    font-family: 'inter', sans-serif;
+}
+/* style tombol hamburger */
+.hamburger-line{
+    @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+}
+/* efek ketika scroll */
+.navbar-fixed{
+    @apply fixed z-[9999] bg-white/40 backdrop-blur-lg shadow-md;
+ }
+}
